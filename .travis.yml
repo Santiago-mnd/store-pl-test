@@ -18,4 +18,4 @@ deploy:
   target_barnch: gh-pages
   commit-message: "Deploy del proyecto"
   on:
-    branch:main
+    branch: master
