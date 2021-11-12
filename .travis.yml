@@ -18,10 +18,10 @@ email:
 deploy:
   provider: pages
   skip_cleanup: true
-  keep_cleanup: true
+  cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/
-  target_barnch: gh-pages
+  target_branch: gh-pages
   commit-message: "Deploy del proyecto"
   on:
     branch: master
