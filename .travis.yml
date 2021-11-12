@@ -1,0 +1,21 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - '14'
+git:
+  depth: 3
+script:
+  - yarn build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_barnch: gh-pages
+  commit-message: "Deploy del proyecto"
+  on:
+    branch:main
